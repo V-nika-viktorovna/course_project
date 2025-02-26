@@ -61,6 +61,7 @@ def biggest_expenses(df: pd.DataFrame, year: str, month: str) -> dict["json"]:
         categorie2 = {sort_categories[1].get('categorie'): round(sort_categories[1].get('total_amount'), 2)}
         categorie3 = {sort_categories[2].get('categorie'): round(sort_categories[2].get('total_amount'), 2)}
         result = [categorie1, categorie2, categorie3]
+
     except Exception:
         logger.info('We are creating a list with two categories with the most expenses per month.')
         if categorie1 and categorie2:
@@ -71,6 +72,7 @@ def biggest_expenses(df: pd.DataFrame, year: str, month: str) -> dict["json"]:
         else:
             logger.error("Couldn't generate a list")
             result = []
+
     finally:
         return json.dumps(result, ensure_ascii=False, indent=4)
 
@@ -93,6 +95,7 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
         month_data = int(date[5:7])
         if (data_dict.get('Категория') == category and data_dict.get('Статус') == 'OK'
                 and data_dict.get('Сумма операции') < 0):
+
             if month_data > 2:
                 if (int(date_dict[6:10]) == int(date[:4]) and int(date_dict[3:5]) == month_data
                         and int(date_dict[0:2]) <= int(date[8:10])):
@@ -104,6 +107,7 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
                 if (int(date_dict[6:10]) == int(date[:4]) and int(date_dict[3:5]) == month_data-3
                         and int(date_dict[0:2]) >= int(date[8:10])):
                     analyzed_month_dicts.append(data_dict)
+
             elif month_data == 2:
                 if (int(date_dict[6:10]) == int(date[:4]) and int(date_dict[3:5]) == month_data
                         and int(date_dict[0:2]) <= int(date[8:10])):
@@ -115,6 +119,7 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
                 if (int(date_dict[6:10]) == int(date[:4])-1 and int(date_dict[3:5]) == 11
                         and int(date_dict[0:2]) >= int(date[8:10])):
                     analyzed_month_dicts.append(data_dict)
+
             elif month_data == 1:
                 if (int(date_dict[6:10]) == int(date[:4]) and int(date_dict[3:5]) == month_data
                         and int(date_dict[0:2]) <= int(date[8:10])):

@@ -4,6 +4,7 @@ import pytest
 
 @pytest.fixture
 def df_transactions():
+
     transactions = [
         {
             "Дата операции": "10.12.2021 13:00:04",

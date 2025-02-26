@@ -7,29 +7,34 @@ from src.utils import filеter_df_date, get_cards_numbers, get_data_cards, get_t
 
 @pytest.mark.parametrize('expected', ['утро'])
 def test_time_of_day_try_morning(expected):
+
     with freezegun.freeze_time("2025-02-25 06:35:50.032596"):
         assert time_of_day() == expected
 
 
 @pytest.mark.parametrize('expected', ['вечер'])
 def test_time_of_day_try_evening(expected):
+
     with freezegun.freeze_time("2025-02-25 18:35:50.032596"):
         assert time_of_day() == expected
 
 
 @pytest.mark.parametrize('expected', ['день'])
 def test_time_of_day_try_day(expected):
+
     with freezegun.freeze_time("2025-02-25 14:35:50.032596"):
         assert time_of_day() == expected
 
 
 @pytest.mark.parametrize('expected', ['ночь'])
 def test_time_of_day_try_night(expected):
+
     with freezegun.freeze_time("2025-02-25 03:35:50.032596"):
         assert time_of_day() == expected
 
 
 def test_filеter_df_date_try(df_transactions):
+
     df_list = [
                 {
                     "Дата операции": "01.01.2018 20:27:51",
@@ -72,6 +77,7 @@ def test_filеter_df_date_try(df_transactions):
 
 
 def test_filеter_df_date_none():
+
     df = pd.DataFrame([])
     try_func = filеter_df_date(df, '2018-01-02 04:07:25')
     result = try_func.to_dict()
@@ -79,10 +85,12 @@ def test_filеter_df_date_none():
 
 
 def test_get_cards_numbers_try(df_transactions):
+
     assert get_cards_numbers(df_transactions) == ["*5441", "*7197", "*4556"]
 
 
 def test_get_data_cards_try(df_transactions):
+
     assert get_data_cards(df_transactions, ["*5441", "*7197", "*4556"]) == [
                                                                                           {
                                                                                             'last_digits': '5441',
@@ -103,11 +111,13 @@ def test_get_data_cards_try(df_transactions):
 
 
 def test_get_data_cards_df_none():
+
     df = pd.DataFrame([])
     assert get_data_cards(df) == []
 
 
 def test_get_top_five_transactions_try(df_transactions):
+
     try_func = [
                 {
                     "date": "10.01.2018 12:41:24",
@@ -140,9 +150,11 @@ def test_get_top_five_transactions_try(df_transactions):
                     "description": "Пятёрочка"
                 }
             ]
+
     assert get_top_five_transactions(df_transactions) == try_func
 
 
 def test_get_top_five_transactions_none():
+
     df = pd.DataFrame([])
     assert get_top_five_transactions(df=df) == []

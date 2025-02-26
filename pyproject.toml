@@ -15,7 +15,6 @@ dependencies = [
     "requests (>=2.32.3,<3.0.0)",
     "pytest (>=8.3.4,<9.0.0)",
     "freezegun (>=1.5.1,<2.0.0)",
-    "black (>=25.1.0,<26.0.0)"
 ]
 
 
@@ -29,6 +28,10 @@ isort = "^6.0.0"
 flake8 = "^7.1.2"
 black = "^25.1.0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^6.0.0"
+
 [tool.black]
 line-length = 119
 exclude = '.git'
@@ -41,3 +44,18 @@ disallow_untyped_defs = true
 warn_return_any = true
 exclude = ['venv']
 
+[tool.coverage.report]
+exclude_also = [
+    'import *',
+    'logger *',
+    'def main_page',
+    'if self.debug:',
+    'if settings.DEBUG',
+    'raise AssertionError',
+    'raise NotImplementedError',
+    'if 0:',
+    'if __name__ == .__main__.:',
+    'if TYPE_CHECKING:',
+    'class .*\bProtocol\):',
+    '@(abc\.)?abstractmethod',
+]

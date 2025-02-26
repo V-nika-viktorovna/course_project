@@ -50,6 +50,7 @@ def main_page(date_use: str) -> Any:
         DATA_DIR = os.path.join(CURRENT_DIR, '..', 'data')
         FILE_DIR = os.path.join(DATA_DIR, 'operations.xlsx')
         data = pd.read_excel(FILE_DIR)
+
     except Exception as e:
         logger.error(f'Ошибка: {e}')
         return 'Не удалось открыть файл'

@@ -22,7 +22,6 @@ def profitable_cashback_categories(df: pd.DataFrame, year: str, month: str) -> d
     и сумму кешбека в каждой категории за месяц."""
 
     data_dicts = df.to_dict(orient='records')
-
     logger.info('Filtering the DataFrame by date')
     analyzed_cashback_dicts = []
     for data_dict in data_dicts:
