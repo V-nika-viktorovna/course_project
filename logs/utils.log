@@ -2,19 +2,19 @@
 2025-02-25 21:35:50,032 utils INFO: We get the current date and time
 2025-02-25 17:35:50,032 utils INFO: We get the current date and time
 2025-02-25 06:35:50,032 utils INFO: We get the current date and time
-2025-02-26 17:27:44,842 utils INFO: Converting the entered date to datetime
-2025-02-26 17:27:44,844 utils INFO: Filtering the DataFrame
-2025-02-26 17:27:44,849 utils INFO: Converting the entered date to datetime
-2025-02-26 17:27:44,849 utils INFO: Filtering the DataFrame
-2025-02-26 17:27:44,853 utils INFO: Getting a list of all the user's cards
-2025-02-26 17:27:44,859 utils INFO: Creating a list of maps in a filtered DataFrame
-2025-02-26 17:27:44,859 utils INFO: Creating a list of expenses for each card
-2025-02-26 17:27:44,864 utils INFO: Adding the cards for which there were no expenses to the list
-2025-02-26 17:27:44,867 utils INFO: Creating a list of maps in a filtered DataFrame
-2025-02-26 17:27:44,867 utils INFO: Creating a list of expenses for each card
-2025-02-26 17:27:44,867 utils INFO: Adding the cards for which there were no expenses to the list
-2025-02-26 17:27:44,871 utils INFO: Editing the DataFrame
-2025-02-26 17:27:44,872 utils INFO: Creating a list of the top five expenses
-2025-02-26 17:27:44,875 utils INFO: Editing the DataFrame
-2025-02-26 17:27:44,875 utils ERROR: KeyError during filtering
-2025-02-26 17:27:44,875 utils INFO: Creating a list of the top five expenses
+2025-02-26 18:54:41,391 utils INFO: Converting the entered date to datetime
+2025-02-26 18:54:41,393 utils INFO: Filtering the DataFrame
+2025-02-26 18:54:41,397 utils INFO: Converting the entered date to datetime
+2025-02-26 18:54:41,397 utils INFO: Filtering the DataFrame
+2025-02-26 18:54:41,400 utils INFO: Getting a list of all the user's cards
+2025-02-26 18:54:41,406 utils INFO: Creating a list of maps in a filtered DataFrame
+2025-02-26 18:54:41,406 utils INFO: Creating a list of expenses for each card
+2025-02-26 18:54:41,497 utils INFO: Adding the cards for which there were no expenses to the list
+2025-02-26 18:54:41,500 utils INFO: Creating a list of maps in a filtered DataFrame
+2025-02-26 18:54:41,500 utils INFO: Creating a list of expenses for each card
+2025-02-26 18:54:41,500 utils INFO: Adding the cards for which there were no expenses to the list
+2025-02-26 18:54:41,502 utils INFO: Editing the DataFrame
+2025-02-26 18:54:41,504 utils INFO: Creating a list of the top five expenses
+2025-02-26 18:54:41,506 utils INFO: Editing the DataFrame
+2025-02-26 18:54:41,507 utils ERROR: KeyError during filtering
+2025-02-26 18:54:41,507 utils INFO: Creating a list of the top five expenses
