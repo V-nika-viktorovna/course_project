@@ -7,6 +7,7 @@ from src.services import profitable_cashback_categories
 
 @patch('pandas.DataFrame.to_dict')
 def test_profitable_cashback_categories_try(get_mock):
+
     get_mock.return_value = [
         {
             "Дата операции": "03.01.2018 15:55:21",
@@ -82,5 +83,6 @@ def test_profitable_cashback_categories_try(get_mock):
 
 
 def test_profitable_cashback_categories_none():
+
     df = pd.DataFrame([])
     assert profitable_cashback_categories(df, 2018, 1) == '{}'

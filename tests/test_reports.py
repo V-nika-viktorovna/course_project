@@ -86,6 +86,7 @@ def test_spending_by_category_try(get_mock):
             "Сумма операции с округлением": 3000.0
         }
     ]
+
     assert spending_by_category(pd.DataFrame, "Здоровье", '2018-02-15') == [
                                                                             {
                                                                                 "Дата операции": "03.01.2018 15:55:21",
@@ -180,18 +181,22 @@ def test_biggest_expenses_try(get_mock):
             "Сумма операции с округлением": 3000.0
         }
     ]
+
     result = biggest_expenses(pd.DataFrame, 2018, 1)
     assert result == '[\n    {\n        "Красота": -337.0\n    },\n    {\n        "Здоровье": -105.0\n    }\n]'
 
 
 def test_biggest_expenses_df_none():
     df = pd.DataFrame([])
+
     assert biggest_expenses(df, 2018, 1) == '[]'
 
 
 def test_biggest_expenses_year_none(df_transactions):
+
     assert biggest_expenses(df_transactions, 0, 1) == '[]'
 
 
 def test_biggest_expenses_month_none(df_transactions):
+
     assert biggest_expenses(df_transactions, 2018, 0) == '[]'

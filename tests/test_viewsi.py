@@ -5,17 +5,20 @@ from src.views import get_exchange_rate, get_share_price
 
 @patch('requests.get')
 def test_get_exchange_rate_try(mock_get_1):
+
     mock_lict = [
         {'success': True, 'query': {'from': 'USD', 'to': 'RUB', 'amount': 1},
          'info': {'timestamp': 1738744983, 'rate': 98.954297}, 'date': '2025-02-05', 'historical': True,
          'result': 98.954297}
         ]
     mock_get_1.return_value.json.return_value = mock_lict[0]
+
     assert get_exchange_rate() == [{'currency': 'USD', 'rate': 98.95}, {'currency': 'EUR', 'rate': 98.95}]
 
 
 @patch('requests.get')
 def test_get_share_price_try(mock_get_1):
+
     mock_lict = {
                   "pagination": {
                                 "limit": 100,
@@ -44,6 +47,7 @@ def test_get_share_price_try(mock_get_1):
                          ]
                   }
     mock_get_1.return_value.json.return_value = mock_lict
+
     assert get_share_price() == [{'stock': 'AAPL', 'price': 247.04},
                                  {'stock': 'NVDA', 'price': 247.04},
                                  {'stock': 'MSFT', 'price': 247.04},

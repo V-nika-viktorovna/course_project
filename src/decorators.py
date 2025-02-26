@@ -11,6 +11,7 @@ def decorator_write_result_file(func) -> Any:
 
     @wraps(func)
     def wrapper(*args, **kwargs):
+
         result = str(func(*args, **kwargs))
         func_name = f'{func.__name__}.txt'
         CURRENT_DIR = os.path.dirname(__file__)

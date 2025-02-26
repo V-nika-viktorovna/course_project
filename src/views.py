@@ -33,7 +33,6 @@ def get_exchange_rate() -> list[dict]:
                 'rate': result
             }
             result_currency.append(result_dict)
-
     return result_currency
 
 
@@ -66,7 +65,6 @@ def get_share_price() -> list[dict]:
                 "price": result
             }
             result_list.append(result_dict)
-
     return result_list
 
 

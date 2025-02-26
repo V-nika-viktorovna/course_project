@@ -15,5 +15,6 @@ def test_decorator_write_result_file_try(capsys):
     with open(FILE_DIR, 'r') as file:
         text_file = file.read()
     captured = capsys.readouterr()
+
     assert captured.out == 'None\n'
     assert text_file == "17"

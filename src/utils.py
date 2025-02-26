@@ -21,6 +21,7 @@ def time_of_day() -> str:
 
     logger.info('We get the current date and time')
     date_time_now = datetime.datetime.now().hour
+
     hour = int(date_time_now)
     if 4 <= hour < 12:
         time_of_day = 'утро'
@@ -62,6 +63,7 @@ def get_cards_numbers(df: pd.DataFrame) -> list[dict]:
 
     logger.info("Getting a list of all the user's cards")
     data_dicts = df.to_dict(orient='records')
+
     cards_numbers = []
     for data_dict in data_dicts:
         if data_dict.get('Номер карты') not in cards_numbers:
@@ -76,7 +78,7 @@ def get_data_cards(df: pd.DataFrame, users_cards_numbers=[]) -> list[dict]:
     Возвращает список словарей с данными по каждой карте
     -последние 4 цифры номера карты,
     -расход по данной карте
-    -кешбек по данной карте)"""
+    -кешбек по данной карте"""
 
     data_dicts = df.to_dict(orient='records')
     results = []
@@ -103,6 +105,7 @@ def get_data_cards(df: pd.DataFrame, users_cards_numbers=[]) -> list[dict]:
                     cashback_data = str(card_dict.get('Кэшбэк'))
                     if cashback_data != 'nan':
                         cashback += card_dict.get('Кэшбэк')
+
         result_dict = {
             'last_digits': card[1:],
             'total_spent': round(transaction_amount, 2),
@@ -123,6 +126,7 @@ def get_data_cards(df: pd.DataFrame, users_cards_numbers=[]) -> list[dict]:
                 'cashback': 0
             }
             results.append(result_dict)
+
     return results
 
 
@@ -137,12 +141,15 @@ def get_top_five_transactions(df: pd.DataFrame) -> list[dict]:
         logger.info('Editing the DataFrame')
         sort_df = df.sort_values('Сумма операции')
         sort_dicts = sort_df.to_dict(orient='records')
+
     except KeyError:
         logger.error('KeyError during filtering')
         sort_dicts = {}
+
     except Exception as e:
         logger.error(f'Error: {e}')
         sort_dicts = {}
+
     finally:
         logger.info('Creating a list of the top five expenses')
         top_transactions = []
