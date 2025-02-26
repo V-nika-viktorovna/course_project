@@ -1,0 +1,26 @@
+2025-02-26 17:27:44,549 reports INFO: We check if the date is entered, if not, the current date will be assigned.
+2025-02-26 17:27:44,553 reports INFO: We are creating a list with expenses for the last three months (from the transmitted date)
+2025-02-26 17:27:44,557 reports INFO: We check if the date is entered, if not, the current date will be assigned.
+2025-02-26 17:27:44,557 reports INFO: We are creating a list with expenses for the last three months (from the transmitted date)
+2025-02-26 17:27:44,561 reports INFO: We check if the date is entered, if not, the current date will be assigned.
+2025-02-26 17:27:44,561 reports INFO: We are creating a list with expenses for the last three months (from the transmitted date)
+2025-02-26 17:27:44,564 reports INFO: Filtering the DataFrame by the desired month
+2025-02-26 17:27:44,564 reports INFO: Creating a list of categories
+2025-02-26 17:27:44,564 reports INFO: Creating and sorting a list of expenses by category
+2025-02-26 17:27:44,564 reports INFO: We are creating a list with three categories with the most expenses per month.
+2025-02-26 17:27:44,564 reports INFO: We are creating a list with two categories with the most expenses per month.
+2025-02-26 17:27:44,567 reports INFO: Filtering the DataFrame by the desired month
+2025-02-26 17:27:44,568 reports INFO: Creating a list of categories
+2025-02-26 17:27:44,568 reports INFO: Creating and sorting a list of expenses by category
+2025-02-26 17:27:44,568 reports INFO: We are creating a list with three categories with the most expenses per month.
+2025-02-26 17:27:44,568 reports INFO: We are creating a list with two categories with the most expenses per month.
+2025-02-26 17:27:44,573 reports INFO: Filtering the DataFrame by the desired month
+2025-02-26 17:27:44,573 reports INFO: Creating a list of categories
+2025-02-26 17:27:44,573 reports INFO: Creating and sorting a list of expenses by category
+2025-02-26 17:27:44,573 reports INFO: We are creating a list with three categories with the most expenses per month.
+2025-02-26 17:27:44,573 reports INFO: We are creating a list with two categories with the most expenses per month.
+2025-02-26 17:27:44,578 reports INFO: Filtering the DataFrame by the desired month
+2025-02-26 17:27:44,578 reports INFO: Creating a list of categories
+2025-02-26 17:27:44,578 reports INFO: Creating and sorting a list of expenses by category
+2025-02-26 17:27:44,578 reports INFO: We are creating a list with three categories with the most expenses per month.
+2025-02-26 17:27:44,578 reports INFO: We are creating a list with two categories with the most expenses per month.
